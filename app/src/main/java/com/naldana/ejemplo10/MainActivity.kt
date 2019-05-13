@@ -82,7 +82,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             layoutManager = viewManager
             adapter = viewAdapter
         }
-
     }
 
     fun coinEvent(element:Coin){
