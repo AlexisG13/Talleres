@@ -240,28 +240,41 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+    fun searchByCountry(country : String){
+        var countries : ArrayList<Coin> = ArrayList<Coin>()
+        for (i in 0 .. (listaMonedas.size-1)){
+            if(listaMonedas.get(i).country.equals(country)){
+                countries.add(listaMonedas.get(i))
+            }
+            initRecycler(countries)
+        }
+    }
+
     // TODO (14.2) Funcion que recibe el ID del elemento tocado
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
             // TODO (14.3) Los Id solo los que estan escritos en el archivo de MENU
-            R.id.nav_camera -> {
-
+            R.id.nav_countries -> {
+                    initRecycler(listaMonedas)
             }
-            R.id.nav_gallery -> {
-
+            R.id.nav_sv -> {
+                    searchByCountry("El Salvador")
             }
-            R.id.nav_slideshow -> {
-
+            R.id.nav_eu -> {
+                    searchByCountry("Union Europea")
             }
-            R.id.nav_manage -> {
-
+            R.id.nav_fr -> {
+                    searchByCountry("Francia")
             }
-            R.id.nav_share -> {
-
+            R.id.nav_mx -> {
+                    searchByCountry("Mexico")
             }
-            R.id.nav_send -> {
-
+            R.id.nav_rus -> {
+                    searchByCountry("Rusia")
+            }
+            R.id.nav_pn ->{
+                    searchByCountry("Panama")
             }
         }
 

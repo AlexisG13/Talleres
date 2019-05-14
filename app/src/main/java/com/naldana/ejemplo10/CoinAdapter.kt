@@ -5,13 +5,14 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.coin_layout.view.*
 
 class CoinAdapter(val items: List<Coin> , val clickListener : (Coin) -> Unit) : RecyclerView.Adapter<CoinAdapter.ViewHolder>(){
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: Coin , clickListener: (Coin) -> Unit) = with(itemView){
-
+            Glide.with(this).load(item.img).placeholder(R.drawable.ic_launcher_background).into(imgview_coin)
             tv_nombreMoneda.text = item.name
             tv_nombrePais.text = item.country
             tv_valorMonetario.text = item.value

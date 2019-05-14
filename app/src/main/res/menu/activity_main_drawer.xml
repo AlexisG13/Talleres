@@ -9,21 +9,26 @@
 
         <!-- TODO (3.5) Los mienbros del menu necesitan ID, TITLE-->
         <item
-                android:id="@+id/nav_camera"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="Import"/>
+                android:id="@+id/nav_countries"
+                android:checked="true"
+                android:title="Todos"/>
         <item
-                android:id="@+id/nav_gallery"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="Gallery"/>
+                android:id="@+id/nav_sv"
+                android:title="El Salvador"/>
         <item
-                android:id="@+id/nav_slideshow"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="Slideshow"/>
+                android:id="@+id/nav_mx"
+                android:title="México"/>
         <item
-                android:id="@+id/nav_manage"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Tools"/>
+                android:id="@+id/nav_pn"
+                android:title="Panama"/>
+        <item android:id="@+id/nav_rus"
+              android:title="Rusia"/>
+        <item android:id="@+id/nav_fr"
+              android:title="Francia"
+            />
+        <item android:id="@+id/nav_eu"
+              android:title="Union Europea"
+        />
     </group>
 
     <!-- TODO (3.6) Se puede definir  seccion con Communicate -->
